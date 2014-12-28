@@ -1,6 +1,6 @@
 package rosalila.taller.platformer.client;
 
-import rosalila.taller.platformer.TallerPlatformer;
+import rosalila.taller.platformer.LitterIvis;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
@@ -14,6 +14,6 @@ public class GwtLauncher extends GwtApplication {
 
 	@Override
 	public ApplicationListener getApplicationListener () {
-		return new TallerPlatformer();
+		return new LitterIvis();
 	}
 }

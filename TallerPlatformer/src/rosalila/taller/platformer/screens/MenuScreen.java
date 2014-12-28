@@ -1,5 +1,6 @@
-package rosalila.taller.platformer;
+package rosalila.taller.platformer.screens;
 
+import rosalila.taller.platformer.LitterIvis;
 import rosalila.taller.platformer.listener.InputDYAListener;
 
 import com.badlogic.gdx.ApplicationListener;
@@ -14,7 +15,11 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public class menu implements ApplicationListener {
+public class MenuScreen extends AbstractScreen {
+
+	public MenuScreen(LitterIvis game) {
+		super(game);
+	}
 
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
@@ -27,7 +32,7 @@ public class menu implements ApplicationListener {
 	private TextureRegion intro1T, intro2T, intro3T, intro4T, intro5T;
 	
 	@Override
-	public void create() {		
+	public void show() {		
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 		
@@ -93,23 +98,23 @@ public class menu implements ApplicationListener {
 		
 		btn1.setPosition(5, heit);
 		stg.addActor(btn1);
-		btn1.addListener(new InputDYAListener(btn1, 1));
+		btn1.addListener(new InputDYAListener(btn1, 1, game));
 		
 		btn2.setPosition(5 + btn2.getWidth(),heit);
 		stg.addActor(btn2);
-		btn2.addListener(new InputDYAListener(btn2, 2));
+		btn2.addListener(new InputDYAListener(btn2, 2, game));
 		
 		btn3.setPosition(5 + btn3.getWidth()*2, heit);
 		stg.addActor(btn3);
-		btn3.addListener(new InputDYAListener(btn3, 3));
+		btn3.addListener(new InputDYAListener(btn3, 3, game));
 		
 		btn4.setPosition(5 + btn4.getWidth()*3, heit);
 		stg.addActor(btn4);
-		btn4.addListener(new InputDYAListener(btn4, 4));
+		btn4.addListener(new InputDYAListener(btn4, 4, game));
 		
 		btn5.setPosition(5 + btn4.getWidth()*1.6f, -15);
 		stg.addActor(btn5);
-		btn5.addListener(new InputDYAListener(btn5, 5));
+		btn5.addListener(new InputDYAListener(btn5, 5, game));
 				
 		
 		
@@ -123,14 +128,6 @@ public class menu implements ApplicationListener {
 	}
 
 	@Override
-	public void render() {		
-		Gdx.gl.glClearColor(1, 1, 1, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-			
-		stg.draw();
-	}
-
-	@Override
 	public void resize(int width, int height) {
 		stg.setViewport(512, 275);
 	}
@@ -141,5 +138,19 @@ public class menu implements ApplicationListener {
 
 	@Override
 	public void resume() {
+	}
+
+	@Override
+	public void render(float delta) {
+		Gdx.gl.glClearColor(1, 1, 1, 1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+			
+		stg.draw();
+	}
+
+	@Override
+	public void hide() {
+		// TODO Auto-generated method stub
+		
 	}
 }

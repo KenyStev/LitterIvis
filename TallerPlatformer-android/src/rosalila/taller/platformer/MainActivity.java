@@ -13,6 +13,6 @@ public class MainActivity extends AndroidApplication {
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.useGL20 = false;
         
-        initialize(new TallerPlatformer(1), cfg);
+        initialize(new LitterIvis(1), cfg);
     }
 }

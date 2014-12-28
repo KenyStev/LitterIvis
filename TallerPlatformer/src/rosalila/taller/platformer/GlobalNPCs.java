@@ -1,11 +1,10 @@
 package rosalila.taller.platformer;
 
-import rosalila.taller.platformer.TallerPlatformer.Koala;
+import rosalila.taller.platformer.screens.MenuScreen;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class GlobalNPCs
@@ -18,7 +17,8 @@ public class GlobalNPCs
 	public static Animation asesinado;
 	public static Animation jefe;
 	
-	public static TallerPlatformer game;
+	public static LitterIvis game;
+	public static MenuScreen MENU;
 	
 	public static void init(int level)
 	{
@@ -68,25 +68,25 @@ public class GlobalNPCs
 		{
 			float x=124f;
 			float y=2f;
-			batch.draw(policia.getKeyFrame(0),x + Koala.WIDTH, y, - Koala.WIDTH, Koala.HEIGHT);
+			batch.draw(policia.getKeyFrame(0),x + Ivis.WIDTH, y, - Ivis.WIDTH, Ivis.HEIGHT);
 		}
 		if(level==2)
 		{
-			batch.draw(comprador1.getKeyFrame(0),(float)68f + (float)Koala.WIDTH, (float)10f, -(float)Koala.WIDTH, (float)Koala.HEIGHT);
-			batch.draw(comprador2.getKeyFrame(0),(float)110f + (float)Koala.WIDTH, (float)14f, -(float)Koala.WIDTH, (float)Koala.HEIGHT);
-			batch.draw(comprador3.getKeyFrame(0),(float)176f + (float)Koala.WIDTH, (float)2f, -(float)Koala.WIDTH, (float)Koala.HEIGHT);
+			batch.draw(comprador1.getKeyFrame(0),(float)68f + (float)Ivis.WIDTH, (float)10f, -(float)Ivis.WIDTH, (float)Ivis.HEIGHT);
+			batch.draw(comprador2.getKeyFrame(0),(float)110f + (float)Ivis.WIDTH, (float)14f, -(float)Ivis.WIDTH, (float)Ivis.HEIGHT);
+			batch.draw(comprador3.getKeyFrame(0),(float)176f + (float)Ivis.WIDTH, (float)2f, -(float)Ivis.WIDTH, (float)Ivis.HEIGHT);
 		}
 		if(level==3)
 		{
-			batch.draw(extorsionada.getKeyFrame(0),(float)122f + (float)Koala.WIDTH, (float)2f, -(float)Koala.WIDTH, (float)Koala.HEIGHT);
+			batch.draw(extorsionada.getKeyFrame(0),(float)122f + (float)Ivis.WIDTH, (float)2f, -(float)Ivis.WIDTH, (float)Ivis.HEIGHT);
 		}
 		if(level==4)
 		{
-			batch.draw(asesinado.getKeyFrame(0),(float)90f + (float)Koala.WIDTH, (float)7f, -(float)Koala.WIDTH, (float)Koala.HEIGHT);
+			batch.draw(asesinado.getKeyFrame(0),(float)90f + (float)Ivis.WIDTH, (float)7f, -(float)Ivis.WIDTH, (float)Ivis.HEIGHT);
 		}
 		if(level==5)
 		{
-			batch.draw(jefe.getKeyFrame(0),(float)38f + (float)Koala.WIDTH, (float)2f, -(float)Koala.WIDTH, (float)Koala.HEIGHT);
+			batch.draw(jefe.getKeyFrame(0),(float)38f + (float)Ivis.WIDTH, (float)2f, -(float)Ivis.WIDTH, (float)Ivis.HEIGHT);
 		}
 	}
 }
