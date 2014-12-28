@@ -1,7 +1,5 @@
 package rosalila.taller.platformer;
 
-import rosalila.taller.platformer.screens.MenuScreen;
-
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -16,9 +14,6 @@ public class GlobalNPCs
 	public static Animation extorsionada;
 	public static Animation asesinado;
 	public static Animation jefe;
-	
-	public static LitterIvis game;
-	public static MenuScreen MENU;
 	
 	public static void init(int level)
 	{
